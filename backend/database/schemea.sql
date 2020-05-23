@@ -28,14 +28,14 @@ CREATE TABLE posts
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE comments
-(
-    id SERIAL PRIMARY KEY,
-    user_comments_id INTEGER REFERENCES users(id),
-    post_comment_id INTEGER REFERENCES posts(id),
-    body TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
+-- CREATE TABLE comments
+-- (
+--     id SERIAL PRIMARY KEY,
+--     user_comments_id INTEGER REFERENCES users(id),
+--     post_comment_id INTEGER REFERENCES posts(id),
+--     body TEXT,
+--     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+-- );
 
 CREATE TABLE likes
 (
@@ -50,3 +50,25 @@ CREATE TABLE hashtags
     tag VARCHAR,
     search_post_id INT REFERENCES posts(id)
 );
+
+INSERT INTO users(first_name, last_name, user_name)
+    VALUES('Ohidur','Rahman','GangstaShepard'),
+    ('Kanye','West','Ye'),
+    ('Taylor','Swift','TaylorSwiftMemePage');
+
+INSERT INTO posts(user_post_id, caption)
+(1, "This is the first beep"),
+(2, "ima let you finish"),
+(3, "hissss"),
+(1, "someone's going to make a account called Justin Beeper");
+
+-- INSERT INTO comments
+
+INSERT INTO likes(user_like_id, post_like_id)
+    VALUES(1,2),
+          (2,1),
+          (3,1),
+          (2,2);
+
+INSERT INTO hashtags(tag,search_post_id)
+    VALUES("#beeper",4)
