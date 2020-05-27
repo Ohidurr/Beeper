@@ -15,7 +15,7 @@ CREATE TABLE users
     first_name TEXT,
     last_name TEXT,
     display_name TEXT not null UNIQUE,
-    profile_pic VARCHAR,
+    -- profile_pic VARCHAR,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE posts
 (
     id SERIAL PRIMARY KEY,
     user_post_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
-    post_pic VARCHAR,
+    -- post_pic VARCHAR,
     caption TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -51,24 +51,28 @@ CREATE TABLE hashtags
     search_post_id INT REFERENCES posts(id)
 );
 
-INSERT INTO users(first_name, last_name, user_name)
-    VALUES('Ohidur','Rahman','GangstaShepard'),
-    ('Kanye','West','Ye'),
-    ('Taylor','Swift','TaylorSwiftMemePage');
+INSERT INTO users(first_name, last_name, display_name)
+    VALUES
+        ('Ohidur','Rahman','GangstaShepard'),
+        ('Kanye','West','Ye'),
+        ('Taylor','Swift','TaylorSwiftMemePage');
 
 INSERT INTO posts(user_post_id, caption)
-(1, "This is the first beep"),
-(2, "ima let you finish"),
-(3, "hissss"),
-(1, "someone's going to make a account called Justin Beeper");
+    VALUES
+        (1, 'This is the first beep'),
+        (2, 'ima let you finish'),
+        (3, 'hissss'),
+        (1, 'someone send help');
 
 -- INSERT INTO comments
 
 INSERT INTO likes(user_like_id, post_like_id)
-    VALUES(1,2),
+    VALUES
+          (1,2),
           (2,1),
           (3,1),
           (2,2);
 
 INSERT INTO hashtags(tag,search_post_id)
-    VALUES("#beeper",4)
+    VALUES
+        ('#beeper',4);
