@@ -1,4 +1,4 @@
-const db = require("../db/index")
+const db = require("../database/index")
 
 const getAllPosts = async (req,res,next) => {
     try{

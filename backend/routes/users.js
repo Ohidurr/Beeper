@@ -1,11 +1,5 @@
 const users = require('express').Router();
-const {
-  getSingleUserById,
-  searchUsersByName,
-  editUserInfo,
-  getUsersPosts,
-  createUser
-} = require("../queries/usersQueries")
+const { getSingleUserById,searchUsersByName, editUserInfo,getUsersPosts,createUser } = require("../queries/users")
 
 
 users.get("/:id", getSingleUserById)
@@ -16,3 +10,4 @@ users.post("/", createUser)
 
 
 module.exports = users;
+ 
