@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import LandingNavBar from './LandingPageNav'
 import { useHistory } from 'react-router-dom';
 import '../css/FeedPage.css'
+
 import Modal from './Modal'
 import axios from 'axios'
 
@@ -11,6 +12,7 @@ const Feed = () => {
 import { useHistory } from 'react-router-dom';
 import "../css/LandingPage.css"
 import axios from 'axios';
+
 const LandingPage = () => {
 
     const [Form,setShowForm] = useState(false)
@@ -68,7 +70,6 @@ const LandingPage = () => {
         return <div className="login-info">
             <form id="loginForm" onSubmit={handleLogin}>
                 <input name="display_name" placeholder="username"></input>
-                {/* <input name="password" type="password" placeholder="password"></input> */}
                 <button type="submit">submit</button>
             </form>
         
@@ -97,7 +98,7 @@ const LandingPage = () => {
             <img className="logo" src={imgs}/>
 
             </div>
-    
+
             </div>
             <div id='rightSide'>
                 <header>
@@ -107,11 +108,14 @@ const LandingPage = () => {
                 <div className="bottom">
                 
                 </div>
+
                 </div>
 
 
                 {Form?login():null}
                 {signUpForm?signup():null}
+
+
 
             </div>
     )
