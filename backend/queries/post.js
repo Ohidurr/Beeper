@@ -8,11 +8,12 @@ const getAllPosts = async (req,res,next) => {
             message: "got all posts",
             body:posts,
         })
+    }
         catch(error){
             console.log("unable to retreive all posts")
         }
     }
-}
+
 
 const getPostByUser = async (req,res, next) => {
     try{

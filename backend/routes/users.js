@@ -1,10 +1,10 @@
 const users = require('express').Router();
-const { getSingleUserById,searchUsersByName, editUserInfo,getUsersPosts,createUser } = require("../queries/users")
+const { getSingleUserById,searchUsersByName, editUserInfo, getUsersPosts, createUser } = require("../queries/users")
 
 
 users.get("/:id", getSingleUserById)
-users.get("/search/:userName", searchUsersByName)
-users.patch("/:id", editUserInfo)
+// users.get("/search/:userName", searchUsersByName)
+// users.patch("/:id", editUserInfo)
 users.get("/posts/:id", getUsersPosts)
 users.post("/", createUser)
 

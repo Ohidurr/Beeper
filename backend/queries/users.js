@@ -59,4 +59,4 @@ const createUser = async (req, res, next) => {
     next(error)
     }
 }
-module.exports = { getSingleUserById,getUsersPosts,createUser };
+module.exports = { getSingleUserById,getUsersPosts, createUser };

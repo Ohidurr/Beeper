@@ -21,5 +21,5 @@ app.use('/posts', postRouter);
 // app.use('/comments', commentsRouter);
 // app.use('/hashtags', hashTagRouter);
 
-app.listen(PORT, () => console.log("Server running on port ", port));
+app.listen(PORT, () => console.log("Server running on port ", PORT));
 
