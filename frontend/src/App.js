@@ -12,7 +12,7 @@ function App() {
         <p>Be heard</p>
     <Switch>
     <Route path={"/feed"}>
-    <feedPage/>
+    <FeedPage/>
     </Route>
 </Switch>
     </div>
