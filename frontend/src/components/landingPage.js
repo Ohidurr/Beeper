@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LandingNavBar from './LandingPageNav'
+import navBar from './navBar'
 import { useHistory } from 'react-router-dom';
 import '../css/FeedPage.css'
 
@@ -53,7 +53,7 @@ const LandingPage = () => {
         let display_name={username:e.target.username.value}
         let profile_pic={profile_pic:e.target.profile_pic.value}
         if(!profile_pic){
-            profile_pic="https://img.favpng.com/6/14/19/computer-icons-user-profile-icon-design-png-favpng-vcvaCZNwnpxfkKNYzX3fYz7h2.jpg"
+            profile_pic=""
         }
         let newUser={first_name,last_name,display_name,profile_pic}
         try{

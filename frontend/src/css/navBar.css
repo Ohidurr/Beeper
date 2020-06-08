@@ -1,0 +1,38 @@
+.toolbar {
+    position: fixed;
+    width: 100%;
+    background-color: #03396c;
+    height: 50px;
+    top: 0;
+    left: 0;    
+}
+
+.toolbar_navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    padding-left: 1 rem;
+}
+
+.toobar_navigation_items a:visited {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+#logout{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.feed {
+    text-decoration: none;
+}
+
+.profile {
+    text-decoration: none;
+    color: white;
+}
