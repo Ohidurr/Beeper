@@ -97,16 +97,16 @@ const FeedPage = () => {
     const handleCaption = (e) => {
         setCaption(e.target.value)
     }
+    
+    axios.post("http://localhost:3001/posts", post)
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
 
  
-        axios.post("http://localhost:3001/posts", post)
-            .then((data) => {
-                console.log(data)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }
    
     return(
         <div>
@@ -119,7 +119,8 @@ const FeedPage = () => {
             <br></br>
         </div>
             <br></br>
-            <form className="fileUpload" onSubmit={handleClick}>
+            <form> 
+            // className="fileUpload" onSubmit={handleClick}>
             <input type="file" name="myFile" placeholder="Upload an Image" onChange={uploadImage}/>
             <input  id="caption" name="caption" placeholder="Comment" onChange={handleCaption}></input>
             <button  id="submit" type="submit">Create Post</button>

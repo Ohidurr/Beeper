@@ -6,12 +6,6 @@ import '../css/FeedPage.css'
 import Modal from './Modal'
 import axios from 'axios'
 
-const Feed = () => {
-
-}import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
-import "../css/LandingPage.css"
-import axios from 'axios';
 
 const LandingPage = () => {
 

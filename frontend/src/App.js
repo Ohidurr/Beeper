@@ -2,6 +2,8 @@ import React, { createContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
+import FeedPage from './components/FeedPage'
+import LandingPage from './components/LandingPage'
 export const Context = createContext()
 
 
