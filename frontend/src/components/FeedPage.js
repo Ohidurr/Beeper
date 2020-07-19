@@ -94,6 +94,7 @@
         
 //     }
 
+<<<<<<< HEAD
 //     const handleCaption = (e) => {
 //         setCaption(e.target.value)
 //     }
@@ -137,6 +138,52 @@
 
 
 //         </section>
+=======
+    const handleCaption = (e) => {
+        setCaption(e.target.value)
+    }
+    
+    axios.post("http://localhost:3001/posts", post)
+        .then((data) => {
+            console.log(data)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+
+ 
+   
+    return(
+        <div>
+        <nav>
+            <navBar/>
+        </nav>
+        <section>
+        <div className="search">
+            <input type="text" placeholder="Search #Hashtags" onChange={handleSearch}/>
+            <br></br>
+        </div>
+            <br></br>
+            <form> 
+            // className="fileUpload" onSubmit={handleClick}>
+            <input type="file" name="myFile" placeholder="Upload an Image" onChange={uploadImage}/>
+            <input  id="caption" name="caption" placeholder="Comment" onChange={handleCaption}></input>
+            <button  id="submit" type="submit">Create Post</button>
+            </form>
+            {loading ? (
+                <h3>Loading...</h3>
+            ): (
+                <img src={image} name="modal-button" style ={{width: '200px'}} />
+            )}
+            <br></br>
+        <div className="feed">
+            {postPics}
+            <p></p>
+        </div>
+
+
+        </section>
+>>>>>>> f62b54a27e3f97325ad055f8bb704d437ecb8448
                 
 //         {showModal ? <Modal post={focusPost} /> : null} 
 //         {searchFail?<div><h2> No Posts found </h2></div>:null}
