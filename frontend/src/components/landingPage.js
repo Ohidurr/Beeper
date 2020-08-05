@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import navBar from './navBar'
 import { useHistory } from 'react-router-dom';
-import '../css/FeedPage.css'
 
-import Modal from './Modal'
-import axios from 'axios'
+
+// import Modal from './Modal'
+// import axios from 'axios'
 
 
 const LandingPage = () => {
@@ -23,41 +23,41 @@ const LandingPage = () => {
         setsignUpForm(!signUpForm)
     }
     const handleLogin = async(e) => {
-        e.preventDefault()
-        let display_name = e.target.display_name.value
-        let url=`http://localhost:3001/users/search/${display_name}`
-        try{
-        let res = await axios.get(url)
-        let user=res.data.body.searchUser
-            if(user.length){
-                sessionStorage.setItem("currentUser",user[0].id)
-                history.push(`/feed`)
-            }else{
-                alert("fail")
-            }
-        }catch(error){
-            console.log(error);
-        }
+        // e.preventDefault()
+        // let display_name = e.target.display_name.value
+        // let url=`http://localhost:3001/users/search/${display_name}`
+        // try{
+        // let res = await axios.get(url)
+        // let user=res.data.body.searchUser
+        //     if(user.length){
+        //         sessionStorage.setItem("currentUser",user[0].id)
+        //         history.push(`/feed`)
+        //     }else{
+        //         alert("fail")
+        //     }
+        // }catch(error){
+        //     console.log(error);
+        // }
     }
 
     const  handleSignup = async(e) => {
-        e.preventDefault()
-        let first_name={firstname:e.target.firstname.value}
-        let last_name={lastname:e.target.lastname.value}
-        let display_name={username:e.target.username.value}
-        let profile_pic={profile_pic:e.target.profile_pic.value}
-        if(!profile_pic){
-            profile_pic=""
-        }
-        let newUser={first_name,last_name,display_name,profile_pic}
-        try{
-            let res = await axios.post(`http://localhost:3001/users/`,newUser)
-            debugger
-            sessionStorage.setItem("currentUser",res.data.body.newUser.id)
-            history.push(`/feed`)
-     }catch(error){
-         console.log(error);
-     }
+    //     e.preventDefault()
+    //     let first_name={firstname:e.target.firstname.value}
+    //     let last_name={lastname:e.target.lastname.value}
+    //     let display_name={username:e.target.username.value}
+    //     let profile_pic={profile_pic:e.target.profile_pic.value}
+    //     if(!profile_pic){
+    //         profile_pic=""
+    //     }
+    //     let newUser={first_name,last_name,display_name,profile_pic}
+    //     try{
+    //         let res = await axios.post(`http://localhost:3001/users/`,newUser)
+    //         debugger
+    //         sessionStorage.setItem("currentUser",res.data.body.newUser.id)
+    //         history.push(`/feed`)
+    //  }catch(error){
+    //      console.log(error);
+    //  }
     }
 
     const login = ()=>{
@@ -89,7 +89,7 @@ const LandingPage = () => {
         <div className="LandingPage">
             <div>
         <div id="leftSide">
-            <img className="logo" src={imgs}/>
+           
 
             </div>
 
