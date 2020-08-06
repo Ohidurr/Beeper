@@ -2,9 +2,9 @@ const posts = require("express").Router()
 
 const {  getAllPosts, getPostByUser, createPost, deletePost, getSinglePost, editPost} = require("../queries/post");
 
+const { CheckToken } = require("../middleware/auth")
 
-
-posts.get("/", getAllPosts);
+posts.get("/", CheckToken, getAllPosts);
 
 posts.get("/:id", getPostByUser);
 

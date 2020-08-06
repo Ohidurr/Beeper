@@ -8,7 +8,7 @@ const checkToken = async (req, res, next) => {
         req.user_id = uid;
         next()
     } catch (error) {
-        res.status(401).json({message: "Error 404, No authenticated user"})
+        res.status(401).json({message: "No authenticated user"})
     }
 }
 module.exports = { checkToken }
