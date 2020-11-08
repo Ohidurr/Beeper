@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS beeper_db;
-CREATE DATABASE beeper_db;
+-- DROP DATABASE IF EXISTS beeper_db;
+-- CREATE DATABASE beeper_db;
 
-\c beeper_db;
+-- \c beeper_db;
 
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS posts;
