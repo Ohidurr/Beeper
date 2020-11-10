@@ -5,5 +5,5 @@ Twitter like website called Beeper!
 
 
 # Future implentation
-*A map to show where what Beeps are going on in that city
-*content filters, no one will be pushing their political agenda onto you
+* A map to show where what Beeps are going on in that city
+* Abiltiy to edit post and view edit history
