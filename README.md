@@ -1,7 +1,7 @@
 # Beeper
 Twitter like website called Beeper!
-*Beeper will allow users to edit their Beeps, no more pesky typos
-*Allow users to 
+* Beeper will allow users to see posts from all around the world and localize post. 
+
 
 
 # Future implentation
